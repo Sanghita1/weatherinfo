@@ -79,7 +79,7 @@ button:active
         justify-content: center;
     }
 }
-@media(max-width: 363px)
+@media(max-width: 373px)
 {
     body h1{
         font-size: 1.3rem;
