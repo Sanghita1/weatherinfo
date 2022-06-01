@@ -25,6 +25,12 @@ app.post("/search",function(req,res)
         else{
             var info = JSON.parse(response.body);
             console.log(info);
+            var cod = info.cod;
+            if(cod=="404")
+            {
+                res.send("city not found");
+            }
+            else{
             var temp = info.list[0].main.temp + "°C";
             // var maxtemp = info.list[0].main.temp_max + "°C";
             // var mintemp = info.list[0].main.temp_min + "°C";
@@ -44,7 +50,7 @@ app.post("/search",function(req,res)
             var weathertp2 = info.list[16].weather[0].main;
 
             res.render("data.ejs", {place:location,currtemp:temp, feels:feels, humidity:humidity, weathertype:weathertp, description:description, currtemp1:temp1, humidity1:humidity1, weathertype1:weathertp1, currtemp2:temp2, humidity2:humidity2, weathertype2:weathertp2})
-           
+            }
             
         }
     });
