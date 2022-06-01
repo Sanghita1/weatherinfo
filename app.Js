@@ -35,13 +35,13 @@ app.post("/search",function(req,res)
             
             // var mintemp1 = info.list[6].main.temp_min + "°C";
             // var maxtemp1 = info.list[6].main.temp_max + "°C";
-            var temp1 = info.list[6].main.temp+"°C";
-            var humidity1 = info.list[6].main.humidity + "%";
-            var weathertp1 = info.list[6].weather[0].main;
+            var temp1 = info.list[8].main.temp+"°C";
+            var humidity1 = info.list[8].main.humidity + "%";
+            var weathertp1 = info.list[8].weather[0].main;
             
-            var temp2 = info.list[14].main.temp+"°C";
-            var humidity2 = info.list[14].main.humidity + "%";
-            var weathertp2 = info.list[14].weather[0].main;
+            var temp2 = info.list[16].main.temp+"°C";
+            var humidity2 = info.list[16].main.humidity + "%";
+            var weathertp2 = info.list[16].weather[0].main;
 
             res.render("data.ejs", {place:location,currtemp:temp, feels:feels, humidity:humidity, weathertype:weathertp, description:description, currtemp1:temp1, humidity1:humidity1, weathertype1:weathertp1, currtemp2:temp2, humidity2:humidity2, weathertype2:weathertp2})
            
