@@ -6,7 +6,7 @@
     "request": "^2.88.2"
   },
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node app.Js",
+    "dev": "nodemon app.Js"
   }
 }
